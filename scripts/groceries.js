@@ -3,25 +3,77 @@
 // A set of ingredients should be added to products		 
 
 var products = [
-	{
-		name: "brocoli",
-		vegetarian: true,
-		glutenFree: true,
-		price: 1.99
-	},
-	{
-		name: "bread",
-		vegetarian: true,
-		glutenFree: false,
-		price: 2.35
-	},
-	{
-		name: "salmon",
-		vegetarian: false,
-		glutenFree: true,
-		price: 10.00
-	}
-];
+				{
+					name: "Brocoli (1.00lb)",
+					vegetarian: true,
+					glutenFree: true,
+					organic: false,
+					price: 1.99
+				},
+				{
+					name: "Bread (0.50lb)",
+					vegetarian: true,
+					glutenFree: false,
+					organic: false,
+					price: 2.35
+				},
+				{
+					name: "Salmon Filet (1.00lb)",
+					vegetarian: false,
+					glutenFree: true,
+					organic: true,
+					price: 10.13
+				},
+				{
+					name: "NY Strip Steak (1.00lb)",
+					vegetarian: false,
+					glutenFree: true,
+					organic: true,
+					price: 22.30
+				},
+				{
+					name: "Chicken Breast (1.00lb)",
+					vegetarian: false,
+					glutenFree: true,
+					organic: true,
+					price: 16.73
+				},
+				{
+					name: "Artichokes (0.75lb)",
+					vegetarian: true,
+					glutenFree: true,
+					organic: true,
+					price: 4.23
+				},
+				{
+					name: "Chocolate Cake (2.36lb)",
+					vegetarian: true,
+					glutenFree: false,
+					organic: false,
+					price: 32.43
+				},
+				{
+					name: "Turkey Breast (1.00lb)",
+					vegetarian: false,
+					glutenFree: true,
+					organic: false,
+					price: 14.73
+				},
+				{
+					name: "Rigatoni (1.13lb)",
+					vegetarian: true,
+					glutenFree: false,
+					organic: false,
+					price: 4.23
+				},
+				{
+					name: "Oreo Cookies (0.40lb)",
+					vegetarian: true,
+					glutenFree: false,
+					organic: false,
+					price: 6.67
+				}
+		];
 	
 
 
@@ -35,6 +87,9 @@ function restrictListProducts(prods, restriction) {
 			product_names.push(prods[i].name);
 		}
 		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
+			product_names.push(prods[i].name);
+		}
+		else if ((restriction == "Organic") && (prods[i].organic == true)){
 			product_names.push(prods[i].name);
 		}
 		else if (restriction == "None"){
