@@ -1,6 +1,6 @@
 # SEG3125_Lab2
 
-#Contrbuters:
+#Contributers:
 
     Daniel Andreev 300168201
     Evan Zeglinski-Spinney 300137309
