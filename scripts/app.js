@@ -130,18 +130,20 @@ function populateListProductChoices(slct1, slct2) {
         var labelPrice = document.createElement('label')
         label.htmlFor = optionArray[i].name;
         label.htmlFor = optionArray[i].price;
-        var image = document.createElement('img');
-        image.src = optionArray[i].img;
-        image.setAttribute('width', '100px');
-        image.setAttribute('height', '100px');
-        label.appendChild(image);
-        label.classList.add("img-left");
-        label.appendChild(document.createTextNode(optionArray[i].name));
+		label.appendChild(document.createTextNode(optionArray[i].name));
         labelPrice.appendChild(document.createTextNode(optionArray[i].price));
         s2.appendChild(label);
         s2.appendChild(document.createElement("br"));
         s2.appendChild(labelPrice);
         s2.appendChild(document.createElement("br"));
+        var image = document.createElement('img');
+        image.src = optionArray[i].img;
+		
+        image.setAttribute('width', '100px');
+        image.setAttribute('height', '100px');
+        label.appendChild(image);
+        label.classList.add("img-left");
+        
     }
 
 }
