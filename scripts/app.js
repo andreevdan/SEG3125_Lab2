@@ -8,30 +8,6 @@ var products = [
 		price: 1.99
 	},
 	{
-		name: "Gluten-free Bread",
-		vegetarian: true,
-        organic: true,
-        img: "images/gluten-free-bread.png",
-		glutenFree: true,
-		price: 2.35
-	},
-	{
-		name: "Bologna",
-		vegetarian: false,
-        organic: false,
-        img: "images/bologna.jpg",
-		glutenFree: false,
-		price: 10.00
-	},
-    {
-		name: "Bacon",
-		vegetarian: false,
-        organic: true,
-        img: "images/bacon.png",
-		glutenFree: true,
-		price: 1.99
-	},
-	{
 		name: "Cucumber",
 		vegetarian: true,
         img: "images/Cucumber.jpg",
@@ -40,28 +16,12 @@ var products = [
 		price: 2.35
 	},
 	{
-		name: "Gluten-free Brownies",
-		vegetarian: true,
-        img: "images/gluten-free-brownies.jpg",
-		glutenFree: true,
-        organic: false,
-		price: 10.00
-	},
-    {
-		name: "Hot Dogs",
-		vegetarian: false,
-        organic: false,
-        img: "images/hotdogs.png",
-		glutenFree: true,
-		price: 10.00
-	},
-    {
-		name: "Organic Apples",
+		name: "Gluten-free Bread",
 		vegetarian: true,
         organic: true,
-        img: "images/organic-apple.jpg",
+        img: "images/gluten-free-bread.png",
 		glutenFree: true,
-		price: 1.99
+		price: 2.44
 	},
 	{
 		name: "Organic Bananas",
@@ -69,7 +29,31 @@ var products = [
 		glutenFree: true,
         img: "images/organic-bananas.jpg",
         organic: true,
-		price: 2.35
+		price: 3.35
+	},
+	{
+		name: "Bologna",
+		vegetarian: false,
+        organic: false,
+        img: "images/bologna.jpg",
+		glutenFree: false,
+		price: 5.13
+	},
+	{
+		name: "Organic Apples",
+		vegetarian: true,
+        organic: true,
+        img: "images/organic-apple.jpg",
+		glutenFree: true,
+		price: 6.50
+	},
+    {
+		name: "Bacon",
+		vegetarian: false,
+        organic: true,
+        img: "images/bacon.png",
+		glutenFree: true,
+		price: 6.99
 	},
 	{
 		name: "Organic Grapes",
@@ -77,6 +61,22 @@ var products = [
 		glutenFree: true,
         img: "images/organic-grapes.jpg",
         organic: true,
+		price: 8.85
+	},
+	{
+		name: "Gluten-free Brownies",
+		vegetarian: true,
+        img: "images/gluten-free-brownies.jpg",
+		glutenFree: true,
+        organic: false,
+		price: 9.88
+	},
+    {
+		name: "Hot Dogs",
+		vegetarian: false,
+        organic: false,
+        img: "images/hotdogs.png",
+		glutenFree: true,
 		price: 10.00
 	}
 ];
