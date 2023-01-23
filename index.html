@@ -1,59 +1,87 @@
+
+
 <!DOCTYPE html>
 <html>
-<head>
-	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+  <head>
+    <meta charset="utf-8">
+	<! IMPORTANT to use a CSS file - external >
 	<link href="styles/style.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
-
-<div>
-  <h1>Fresco Food</h1>
-</div>
+    <title>Group 18 Grocery App</title>
+  </head>
   
-<!-- Tab links, each one with an onclick event associated with it -->
-<div class="tab">
-  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
-  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
-</div>
+  <body>
+	<div class="topnav">
+		<h1>Group 18 Grocery App</h1>
+		<nav>
+			<a class="active" href="index.html">Home</a>
+  			<a href="#product">Products</a>
+			<a href="#cart">Cart</a>		
+		</nav>
+	</div>
+	
+	
+	<form id="myform" action="index.php" >
+	<br>
 
-<!-- Tab content -->
-<div id="Client" class="tabcontent">
-  <h3>Client Information</h3>
-  <p>Tell us a bit about you.</p>
-	Choose a Category:
-	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
-	  <option value=""></option>
-	  <option value="Vegetarian">Vegetarian</option>
-    <option value="GlutenFree">GlutenFree</option>
-    <option value="Organic">Organic</option>
-    <option value="None">None</option>
-	</select>
-</div>
+	<div class="question">
+		Please specify your dietary restriction(s) (if any) below:
+	</a></div>
 
-<div id="Products" class="tabcontent">
-  <h3>Your targeted products</h3>
-  <p>We preselected products based on your restrictions.</p>
-	 Choose items to buy:
-	 <div id="displayProduct"></div>
-	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
-		Add selected items to cart.
-	</button>
-</div>
+	<div class="question" >
+		<input id="Vegetarian" onchange="populateListProductChoices(this.id, 'displayProduct')" type="checkbox" name="Products" value="Vegetarian">Vegetarian<br>
+		<input id="GlutenFree" onchange="populateListProductChoices(this.id, 'displayProduct')" type="checkbox" name="Products" value="GlutenFree">Gluten-Free<br>
+		<input id="Organic" onchange="populateListProductChoices(this.id, 'displayProduct')" type="checkbox" name="Products" value="Organic">Organic<br>
+		<input id="None" onchange="populateListProductChoices(this.id, 'displayProduct')" type="checkbox" name="Products" value="None">None<br>
+		<br>
+	</div>	
+	</form>
 
-<div id="Cart" class="tabcontent">
-  <h3>Cart</h3>
-  <p>Here is your cart.</p>
-  <div id="displayCart"></div>
-</div>
+	<div class="question">
+	<h2 id="product">Products</h2>
+	</div>
 
-<div>
-  <p>Website designed by Group 18</p>
-</div>
+	<div class="question">
+		<div id="Products">
+			<h3>Your targeted products</h3>
+			   Choose items to buy:
+			   <div id="displayProduct"></div>
+			   <button id="addCart" type="button" class="block" onclick="selectedItems()">
+				  Add selected items to cart.
+			  </button>
+		  </div>
+	</div>
 
-<script src="scripts/groceries.js"></script>
-<script src="scripts/main.js"></script>
+	<div class="question">
+		<h2 id="cart">Cart</h2>
+	</div>
+	<div id="Cart" class="question">
+		<p>Here is your cart:</p>
+		<div class="answer" id="displayCart"></div>
+	  </div>
 
-</body>
-</html>
+	<div class="question">
+		
+	</div>
+
+
+	<div class="footer">
+		<ul class="top-line">
+			<li>
+				<ul class ="line_one">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#surveys">Products</a></li>
+					<li><a href="#Group18">Cart</a></li>
+					<li><a href="https://github.com/andreevdan/SEG3125-LABS-Group18/tree/Lab-2">Github</a></li>
+					<li>
+					<p>📝</p>
+					</li>
+				</ul>
+			</li>
+			<li><p id="signature">©Group 18 SEG3125 2023</p></li>
+		</ul>
+	</div>
+  </body>
+  <script src="scripts/app.js"></script>
+</html> 
+
+
