@@ -115,30 +115,35 @@ function getTotalPrice(chosenProducts) {
 function populateListProductChoices(slct1, slct2) {
     var s1 = document.getElementById(slct1);
     var s2 = document.getElementById(slct2);
-	
+
     s2.innerHTML = "";
-		
+
     var optionArray = restrictListProducts(products, s1.value);
 
-	for (i = 0; i < optionArray.length; i++) {
-		var checkbox = document.createElement("input");
-		checkbox.type = "checkbox";
-		checkbox.name = "product";
-		checkbox.value = optionArray[i].name;
-		s2.appendChild(checkbox);
-		var label = document.createElement('label');
-		label.htmlFor = optionArray[i].name;
-		var image = document.createElement('img');
-		image.src = optionArray[i].img;
-		image.setAttribute('width', '100px');
-		image.setAttribute('height', '100px');
-		label.appendChild(image);
-		label.classList.add("img-left");
-		label.appendChild(document.createTextNode(optionArray[i].name));
-		s2.appendChild(label);
-		s2.appendChild(document.createElement("br"));
-	}
-	
+    for (i = 0; i < optionArray.length; i++) {
+        var checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.name = "product";
+        checkbox.value = optionArray[i].name;
+        s2.appendChild(checkbox);
+        var label = document.createElement('label');
+        var labelPrice = document.createElement('label')
+        label.htmlFor = optionArray[i].name;
+        label.htmlFor = optionArray[i].price;
+        var image = document.createElement('img');
+        image.src = optionArray[i].img;
+        image.setAttribute('width', '100px');
+        image.setAttribute('height', '100px');
+        label.appendChild(image);
+        label.classList.add("img-left");
+        label.appendChild(document.createTextNode(optionArray[i].name));
+        labelPrice.appendChild(document.createTextNode(optionArray[i].price));
+        s2.appendChild(label);
+        s2.appendChild(document.createElement("br"));
+        s2.appendChild(labelPrice);
+        s2.appendChild(document.createElement("br"));
+    }
+
 }
 
 
