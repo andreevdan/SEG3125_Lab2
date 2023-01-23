@@ -18,27 +18,6 @@ var products = [
 					price: 2.35
 				},
 				{
-					name: "Salmon Filet (1.00lb)",
-					vegetarian: false,
-					glutenFree: true,
-					organic: true,
-					price: 10.13
-				},
-				{
-					name: "NY Strip Steak (1.00lb)",
-					vegetarian: false,
-					glutenFree: true,
-					organic: true,
-					price: 22.30
-				},
-				{
-					name: "Chicken Breast (1.00lb)",
-					vegetarian: false,
-					glutenFree: true,
-					organic: true,
-					price: 16.73
-				},
-				{
 					name: "Artichokes (0.75lb)",
 					vegetarian: true,
 					glutenFree: true,
@@ -46,11 +25,25 @@ var products = [
 					price: 4.23
 				},
 				{
-					name: "Chocolate Cake (2.36lb)",
+					name: "Rigatoni (1.13lb)",
 					vegetarian: true,
 					glutenFree: false,
 					organic: false,
-					price: 32.43
+					price: 4.65
+				},
+				{
+					name: "Oreo Cookies (0.40lb)",
+					vegetarian: true,
+					glutenFree: false,
+					organic: false,
+					price: 6.67
+				},
+				{
+					name: "Salmon Filet (1.00lb)",
+					vegetarian: false,
+					glutenFree: true,
+					organic: true,
+					price: 10.13
 				},
 				{
 					name: "Turkey Breast (1.00lb)",
@@ -60,18 +53,25 @@ var products = [
 					price: 14.73
 				},
 				{
-					name: "Rigatoni (1.13lb)",
-					vegetarian: true,
-					glutenFree: false,
-					organic: false,
-					price: 4.23
+					name: "Chicken Breast (1.00lb)",
+					vegetarian: false,
+					glutenFree: true,
+					organic: true,
+					price: 16.73
 				},
 				{
-					name: "Oreo Cookies (0.40lb)",
+					name: "NY Strip Steak (1.00lb)",
+					vegetarian: false,
+					glutenFree: true,
+					organic: true,
+					price: 22.30
+				},
+				{
+					name: "Chocolate Cake (2.36lb)",
 					vegetarian: true,
 					glutenFree: false,
 					organic: false,
-					price: 6.67
+					price: 32.43
 				}
 		];
 	
