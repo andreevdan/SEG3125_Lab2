@@ -85,16 +85,11 @@ var products = [
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
-		if(restriction == "None"){
-			product_names.push(prods[i]);
-		}
-		else if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
-			product_names.push(prods[i]);
-		}
-		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			product_names.push(prods[i]);
-		}
-        else if ((restriction == "Organic") && (prods[i].organic == true)){
+		var restrict = false;
+		if ((restriction == "Vegetarian") 	&& (prods[i].vegetarian == false) 	&& restrict == false) restrict = true;
+		if ((restriction == "GlutenFree") 	&& (prods[i].glutenFree == false) 	&& restrict == false) restrict = true;
+		if ((restriction == "Organic") 		&& (prods[i].organic == false) 		&& restrict == false) restrict = true;
+		if (restrict == false){
 			product_names.push(prods[i]);
 		}
 	}
@@ -143,7 +138,6 @@ function populateListProductChoices(slct1, slct2) {
         image.setAttribute('height', '100px');
         label.appendChild(image);
         label.classList.add("img-left");
-        
     }
 
 }
