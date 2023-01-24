@@ -82,20 +82,28 @@ var products = [
 ];
 
 
-function restrictListProducts(prods, restriction) {
+window.onload = defaultPageLoad();
+
+function defaultPageLoad(){
+	var r4 = document.getElementById("None").checked = true;
+	populateListProductChoices("None", 'displayProduct');
+}
+
+function restrictListProducts(prods, restrictions) {
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
 		var restrict = false;
-		if ((restriction == "Vegetarian") 	&& (prods[i].vegetarian == false) 	&& restrict == false) restrict = true;
-		if ((restriction == "GlutenFree") 	&& (prods[i].glutenFree == false) 	&& restrict == false) restrict = true;
-		if ((restriction == "Organic") 		&& (prods[i].organic == false) 		&& restrict == false) restrict = true;
-		if (restrict == false){
+		for (j=0; j<restrictions.length; j+=1){
+			if ((restrictions[j].value == "Vegetarian") 	&& (prods[i].vegetarian == false)) 	restrict = true;
+			if ((restrictions[j].value == "GlutenFree") 	&& (prods[i].glutenFree == false)) 	restrict = true;
+			if ((restrictions[j].value == "Organic") 		&& (prods[i].organic == false)) 	restrict = true;
+		}
+		if(restrict == false){
 			product_names.push(prods[i]);
 		}
 	}
 	return product_names;
 }
-
 
 function getTotalPrice(chosenProducts) {
 	totalPrice = 0;
@@ -111,9 +119,31 @@ function populateListProductChoices(slct1, slct2) {
     var s1 = document.getElementById(slct1);
     var s2 = document.getElementById(slct2);
 
-    s2.innerHTML = "";
+	var r1 = document.getElementById("Vegetarian");
+	var r2 = document.getElementById("GlutenFree");
+	var r3 = document.getElementById("Organic");
+	var r4 = document.getElementById("None");
+	var rArray = [r1,r2,r3];
+	var restrictions = [];
 
-    var optionArray = restrictListProducts(products, s1.value);
+	if(s1.value == "None" && r4.checked == true){
+		r1.checked = false;
+		r2.checked = false;
+		r3.checked = false;
+	}
+	else{
+		r4.checked = false;
+	}
+	if(r4.checked == false){
+		for(x=0;x<3;x+=1){
+			if (rArray[x].checked==true){
+				restrictions.push(rArray[x]);
+			}
+		}
+	}
+    s2.innerHTML = "";
+	
+    var optionArray = restrictListProducts(products, restrictions);
 
     for (i = 0; i < optionArray.length; i++) {
         var checkbox = document.createElement("input");
@@ -139,7 +169,6 @@ function populateListProductChoices(slct1, slct2) {
         label.appendChild(image);
         label.classList.add("img-left");
     }
-
 }
 
 
