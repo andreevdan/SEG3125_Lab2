@@ -161,7 +161,6 @@ function populateListProductChoices(slct1, slct2) {
 		var price = optionArray[i].price.toFixed(2);
 		var priceString = priceSymbol.concat(price);
 		labelPrice.appendChild(document.createTextNode(priceString));
-		//labelPrice.appendChild(priceSymbol.concat(document.createTextNode(optionArray[i].price)));
         
 		s2.appendChild(label);
         s2.appendChild(document.createElement("br"));
