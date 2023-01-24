@@ -26,7 +26,7 @@ h2 {
 img {
   display: block;
   margin: 0 auto;
-  box-align: center;
+  box-align: left;
   border: 5px solid #333;
   border-radius: 10px;
 }
@@ -72,6 +72,7 @@ table {
 
 .img-left {
   text-align: left;
+  box-align: left;
 }
 
 /* Defining styling for a specific element with an id */

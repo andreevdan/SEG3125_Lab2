@@ -156,11 +156,19 @@ function populateListProductChoices(slct1, slct2) {
         label.htmlFor = optionArray[i].name;
         label.htmlFor = optionArray[i].price;
 		label.appendChild(document.createTextNode(optionArray[i].name));
-        labelPrice.appendChild(document.createTextNode(optionArray[i].price));
-        s2.appendChild(label);
+        
+		var priceSymbol = "$CAD ";
+		var price = optionArray[i].price.toFixed(2);
+		var priceString = priceSymbol.concat(price);
+		labelPrice.appendChild(document.createTextNode(priceString));
+		//labelPrice.appendChild(priceSymbol.concat(document.createTextNode(optionArray[i].price)));
+        
+		s2.appendChild(label);
         s2.appendChild(document.createElement("br"));
         s2.appendChild(labelPrice);
         s2.appendChild(document.createElement("br"));
+		s2.appendChild(document.createElement("br"));
+		s2.appendChild(document.createElement("br"));
         var image = document.createElement('img');
         image.src = optionArray[i].img;
 		
